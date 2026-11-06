@@ -1,0 +1,9 @@
+project: savantenvs/ccv
+target: ccv_read_fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ccv_read_fuzz/testsuite
+cmds:
+  - cmd: /mayhem/ccv_read_fuzz
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/ccv_read_fuzz/ccv_read_fuzz.dict
